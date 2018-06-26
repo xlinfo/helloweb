@@ -2,7 +2,8 @@
   tasks:
     - name: launch container
       docker_container:
-        name: devxlinfo/helloweb
+        name: helloweb
+        image: devxlinfo/helloweb
         ports:
           - 80:80
         recreate: yes

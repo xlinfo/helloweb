@@ -8,10 +8,3 @@
         path: /
         rm: yes
         state: present
-    - name: launch container
-      docker_container:
-        name: helloweb
-        image: helloweb
-        ports:
-          - 80:80
-        recreate: yes

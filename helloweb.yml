@@ -1,0 +1,17 @@
+---
+- hosts: all
+  tasks:
+    - name: build image
+      docker_image:
+        force: yes
+        name: helloweb
+        path: /
+        rm: yes
+        state: present
+    - name: launch container
+      docker_container:
+        name: helloweb
+        image: helloweb
+        ports:
+          - 80:80
+        recreate: yes

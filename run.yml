@@ -1,0 +1,10 @@
+hosts:
+  - all
+    tasks:
+   - name: launch container
+      docker_container:
+        name: helloweb
+        image: helloweb
+        ports:
+          - 80:80
+        recreate: yes
